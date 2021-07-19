@@ -1,2 +1,2 @@
 # ARTHURFLECK1828.github.io
-Portfolio website
+Portfolio website using HTML and CSS alone
