@@ -23,7 +23,7 @@ width: 700px;
 margin-top: auto;
 margin-left: auto;
 margin-right: auto;
-margin-bottom:-300px;
+margin-bottom:-400px;
 font-size: 25px;
 color: #363636;
 font-family: 'Patrick Hand', cursive;
@@ -74,7 +74,7 @@ font-family: 'Patrick Hand', cursive;
   transition: transform .2s; /* Animation */
   width: 30px;
   height: 30px;
-  margin: 0 auto;
+  margin: auto;
   display:inline-block;
 }
 .zoom:hover {
@@ -139,7 +139,7 @@ body {
   min-height: 100vh;
   font-size: 40px;
   text-transform: uppercase;
-  margin top:10px;
+  margin-top:10px;
 }
 
 .box {
@@ -314,4 +314,16 @@ body {
     -webkit-animation-timing-function: ease-out;
             animation-timing-function: ease-out;
   }
+}
+a:link {
+  color: #dbdbdb;
+}
+
+a:visited {
+  color:#dbdbdb;
+}
+.navig{
+  font-size: 25px;
+  color:#dbdbdb;
+  font-family: "Tourney";
 }
