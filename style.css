@@ -10,6 +10,7 @@ h2 {
   font-size: 25px;
   color: rgb(52, 62, 125);
   text-decoration: underline dotted;
+  text-align: center;
 }
 pre {
   font-family:"Patrick Hand",cursive;
@@ -19,7 +20,10 @@ pre {
 .bio
 {
 width: 700px;
-margin: auto;
+margin-top: auto;
+margin-left: auto;
+margin-right: auto;
+margin-bottom:-300px;
 font-size: 25px;
 color: rgb(52, 62, 125);
 font-family: 'Patrick Hand', cursive;
@@ -27,7 +31,10 @@ font-family: 'Patrick Hand', cursive;
 .skills{
   text-align: left;
   width: 800px;
-  margin: auto;
+  margin-top: -350px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
   font-size: 30px;
   color: rgb(52, 62, 125);
   font-family: 'Patrick Hand', cursive;
@@ -89,7 +96,7 @@ html, body {
 }
 
 html{
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: linear-gradient(-45deg, #BCC3C7, #939CA4, #5F6D7A,#2E4051);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
 }
@@ -105,75 +112,98 @@ html{
         background-position: 0 50%;
     }
 }
-.dumb{
-  -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
-	        animation: heartbeat 1.5s ease-in-out infinite both;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+html {
+  scroll-behavior: smooth;
 }
-@-webkit-keyframes heartbeat {
-  from {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-transform-origin: center center;
-            transform-origin: center center;
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", "Gill Sans", "Gill Sans MT", Calibri,
+    "Trebuchet MS", sans-serif;
+  font-weight: 500;
+}
+
+:root {
+  --duration: 3s;
+}
+
+.container {
+  display: flex;
+  position:relative;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 40px;
+  text-transform: uppercase;
+  margin top:10px;
+}
+
+.box {
+  display: inline;
+  position: relative;
+  width: 40px;
+  height: 150px;
+  line-height: 250px;
+  text-align: center;
+  transform-origin: top center;
+}
+
+.box::before,
+.box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.box::before {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  background: #444;
+}
+
+.box::after {
+  width: 3px;
+  height: calc(100% - 20px);
+  background: #444;
+}
+
+.one {
+  animation: one var(--duration) cubic-bezier(0.65, 0, 0.35, 1) 0s infinite
+    forwards;
+}
+
+.two {
+  transform: rotate(-45deg);
+  animation: two var(--duration) cubic-bezier(0.65, 0, 0.35, 1)
+    calc(var(--duration) / 2) infinite forwards;
+}
+
+@keyframes one {
+  0%,
+  100% {
+    transform: rotate(45deg);
   }
-  10% {
-    -webkit-transform: scale(0.91);
-            transform: scale(0.91);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  17% {
-    -webkit-transform: scale(0.98);
-            transform: scale(0.98);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-  33% {
-    -webkit-transform: scale(0.87);
-            transform: scale(0.87);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  45% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+  30%,
+  60% {
+    transform: rotate(0deg);
   }
 }
-@keyframes heartbeat {
-  from {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-transform-origin: center center;
-            transform-origin: center center;
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+
+@keyframes two {
+  0%,
+  100% {
+    transform: rotate(-45deg);
   }
-  10% {
-    -webkit-transform: scale(0.91);
-            transform: scale(0.91);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  17% {
-    -webkit-transform: scale(0.98);
-            transform: scale(0.98);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-  33% {
-    -webkit-transform: scale(0.87);
-            transform: scale(0.87);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  45% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+  30%,
+  60% {
+    transform: rotate(0deg);
   }
 }
