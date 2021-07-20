@@ -327,3 +327,8 @@ a:visited {
   color:#dbdbdb;
   font-family: "Tourney";
 }
+li
+{
+  display: inline;
+  float: center;
+}
